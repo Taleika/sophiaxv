@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Invitación Berni Mis XV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Evitar modo oscuro forzado -->
+  <meta name="color-scheme" content="light only">
+
+  <!-- Open Graph para WhatsApp / Facebook -->
+  <meta property="og:title" content="Te invito a Mis Quince Años!">
+  <meta property="og:description" content="Una noche que empieza elegante... y termina épica.">
+  <meta property="og:image" content="https://taleika.github.io/bernixv/images/miniatura.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://taleika.github.io/bernixv">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Te invito a Mis Quince Años!">
+  <meta name="twitter:description" content="Una noche que empieza elegante... y termina épica.">
+  <meta name="twitter:image" content="https://taleika.github.io/bernixv/images/miniatura.jpg">
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-cream: #F2E1D8;
+      --bg-soft: #F7EFEA;
+      --turquoise: #17A8A6;
+      --coral: #F26C63;
+      --coral-hover: #E55A52;
+      --mustard: #F2C078;
+      --leaf: #17A8A6;
+      --text: #3D3D3D;
+      --turquoise-dark: #0F6F75;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg-cream);
+      color: var(--text);
+      text-align: center;
+      overflow-x: hidden;
+      background-image: radial-gradient(circle at 20% 10%, rgba(242, 192, 120, 0.12) 0%, transparent 36%), radial-gradient(circle at 80% 20%, rgba(23, 168, 166, 0.1) 0%, transparent 34%);
+    }
+
+    h2,
+    h3,
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      margin: 20px 0;
+      line-height: 1.2;
+      color: var(--turquoise);
+      letter-spacing: 0.02em;
+    }
+
+    .section-title::after {
+      content: "✦ ✦ ✦";
+      display: block;
+      margin-top: 12px;
+      color: var(--mustard);
+      font-size: 18px;
+      letter-spacing: 0.18em;
+    }
+
+    h2 {
+      font-size: 3.2em;
+    }
+
+    h3 {
+      font-size: 2.3em;
+    }
+
+    p {
+      font-size: 1.02em;
+      line-height: 1.75;
+      max-width: 760px;
+      margin: 0 auto 20px auto;
+    }
+
+    /* Header */
+    header {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 560px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      padding: 0;
+    }
+
+    @media (min-width: 769px) {
+      header {
+        height: 100vh;
+        aspect-ratio: auto;
+        padding: 120px 20px;
+      }
+    }
+
+    header img.logo {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 336px;
+      max-width: 84%;
+      z-index: 2;
+      transition: opacity 0.5s;
+    }
+
+    .parallax {
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: var(--text);
+      padding: 110px 20px;
+      overflow: hidden;
+    }
+
+    header.parallax {
+      padding: 0;
+      box-sizing: border-box;
+      max-width: 100%;
+    }
+
+    section {
+      position: relative;
+      padding: 80px 20px;
+      background: var(--bg-cream);
+    }
+
+    section:nth-of-type(even) {
+      background: var(--bg-soft);
+    }
+
+    .soft-section {
+      background: var(--bg-soft) !important;
+    }
+
+    .accent-section {
+      background: var(--coral) !important;
+      color: #fff;
+    }
+
+    .accent-section h2,
+    .accent-section p,
+    .countdown-section p {
+      color: #fff;
+    }
+
+    .boho-divider {
+      height: 101px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 312px;
+      margin: 10px 0;
+      opacity: 0.9;
+      filter: drop-shadow(0 6px 8px rgba(0,0,0,0.08));
+    }
+
+    .boho-divider:nth-of-type(4n+1) {
+      background-image: url("images/divider1.svg");
+    }
+
+    .boho-divider:nth-of-type(4n+2) {
+      background-image: url("images/divider2.svg");
+    }
+
+    .boho-divider:nth-of-type(4n+3) {
+      background-image: url("images/divider3.svg");
+    }
+
+    .boho-divider:nth-of-type(4n+4) {
+      background-image: url("images/divider4.svg");
+    }
+
+    /* Countdown */
+    .countdown-section {
+      background: var(--turquoise);
+      padding: 82px 20px;
+    }
+
+    .countdown-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.3em;
+      margin-bottom: 26px;
+      color: var(--turquoise);
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .countdown span {
+      background: var(--coral);
+      border: 1px solid rgba(255,255,255,0.4);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+      padding: 15px 20px;
+      border-radius: 14px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      min-width: 74px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.3s;
+    }
+
+    .countdown small {
+      font-size: 12px;
+      margin-top: 5px;
+      font-weight: normal;
+      color: #fff;
+    }
+
+    /* Iconos animados (latido) */
+    .icon {
+      width: 216px;
+      margin: 0 auto 25px;
+      animation: pulse 1.8s ease-in-out infinite;
+      display: block;
+    }
+
+    @keyframes pulse {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    /* Galería */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .gallery img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(61, 61, 61, 0.22);
+    }
+
+    /* Botones coral orgánicos */
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 13px 28px;
+      background: var(--coral);
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      box-shadow: 0 8px 20px rgba(242, 108, 99, 0.35);
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--coral-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-turquoise {
+      background: var(--turquoise);
+      box-shadow: 0 8px 20px rgba(23, 168, 166, 0.35);
+    }
+
+    .btn-turquoise:hover {
+      background: var(--turquoise-dark);
+    }
+
+    /* Modal */
+    .modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.95);
+      z-index: 1000;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+    }
+
+    .nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      color: #fff;
+      cursor: pointer;
+      user-select: none;
+      padding: 15px;
+      transition: opacity 0.3s;
+    }
+
+    .nav-arrow:hover {
+      opacity: 0.7;
+    }
+
+    .prev {
+      left: 20px;
+    }
+
+    .next {
+      right: 20px;
+    }
+
+    /* Secciones verdes */
+    .green-section {
+      background: var(--leaf);
+      color: var(--turquoise-dark);
+    }
+
+    .green-section h2,
+    .green-section p {
+      color: var(--turquoise-dark);
+    }
+
+    #instagram h2,
+    #instagram p {
+      color: #fff;
+	text-shadow: 0 3px 8px rgba(4,0,0,0.8);
+    }
+
+    #instagram p {
+      font-weight: 400;
+    }
+
+    .icon-lg {
+      width: 280.8px;
+    }
+
+    /* Instagram */
+    #instagram {
+      min-height: 320px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 36px;
+    }
+
+    #instagram .section-title {
+      font-size: 1.9em;
+      margin-bottom: 10px;
+    }
+
+    #instagram .icon {
+      display: none;
+    }
+
+    /* Botón música esquina superior izquierda */
+    #music-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      z-index: 999;
+      animation: pulse 1.8s ease-in-out infinite;
+      transition: opacity 0.3s;
+    }
+
+    #music-btn.playing {
+      opacity: 0.95;
+    }
+
+    .video-section {
+      background: var(--bg-soft);
+      padding: 60px 20px;
+    }
+
+    .video-section video {
+      width: min(920px, 100%);
+      border-radius: 16px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h2 { font-size: 2.4em; }
+      h3 { font-size: 1.9em; }
+      .countdown-title { font-size: 2.6em; }
+      .countdown span { font-size: 16px; padding: 10px; min-width: 55px; }
+      .icon { width: 108px; }
+      .icon-lg { width: 140.4px; }
+      header img.logo { width: 240px; }
+      #instagram .section-title { font-size: 1.6em; }
+      section { padding: 72px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Música -->
+<audio id="bg-music" src="images/music.mp3" loop></audio>
+<img id="music-btn" src="images/icono-musica_play.svg" alt="Música">
+
+<!-- Hero -->
+<header class="parallax" style="background-image:url('images/hero.jpg');">
+  <img src="images/logo.png" alt="Nombre Quinceañera" class="logo" id="hero-logo">
+</header>
+
+<div class="boho-divider"></div>
+
+<!-- Nueva sección con frase -->
+<section class="soft-section">
+  <h2 class="section-title" style="font-family:'Great Vibes', cursive; font-size:3.2em; color:#17A8A6;">Una noche que empieza elegante... y termina épica.</h2>
+</section>
+
+<div class="boho-divider"></div>
+
+<!-- Countdown -->
+<section class="countdown-section">
+  <h2 class="countdown-title">Faltan...</h2>
+  <div class="countdown">
+    <span id="days">00 <small>Días</small></span>
+    <span id="hours">00 <small>Horas</small></span>
+    <span id="mins">00 <small>Min</small></span>
+    <span id="secs">00 <small>Seg</small></span>
+  </div>
+</section>
+
+<div class="boho-divider"></div>
+
+<!-- Fiesta -->
+<section>
+  <img src="images/icono-fiesta.svg" alt="Fiesta" class="icon">
+  <h2 class="section-title">Fiesta</h2>
+  <p><strong>11 de Abril</strong><br>
+  20:00 hs<br>
+  La Rural</p>
+  <a href="https://maps.app.goo.gl/pWHyW9x2PDT9ZNZb6" target="_blank" class="btn">Cómo llegar</a>
+</section>
+
+<div class="boho-divider"></div>
+
+<!-- Galería 1 -->
+<section>
+  <div class="gallery">
+    <img src="images/foto1.jpg" alt="foto1">
+    <img src="images/foto2.jpg" alt="foto2">
+    <img src="images/foto3.jpg" alt="foto3">
+    <img src="images/foto4.jpg" alt="foto4">
+  </div>
+</section>
+
+<div class="boho-divider"></div>
+
+<!-- Confirmación -->
+<section class="accent-section">
+  <h2 class="section-title">Confirmación de Asistencia</h2>
+  <p>Confirmar asistencia antes del 04/04/26</p>
+  <a href="https://forms.gle/QrWM6jVe63yhNtYB7" target="_blank" class="btn btn-turquoise">Confirmar asistencia</a>
+</section>
+
+<div class="boho-divider"></div>
+
+<!-- Dress Code -->
+<section class="green-section">
+  <img src="images/icono-dresscode.svg" alt="Dress Code" class="icon">
+  <h2 class="section-title">Dress Code</h2>
+  <p>Elegante colorido</p>
+</section>
+
+<div class="boho-divider"></div>
+
+<!-- Instagram -->
+<section id="instagram" class="parallax" style="background-image:url('images/imagenig.jpg');">
+  <img src="images/icono-instagram.svg" alt="Instagram" class="icon">
+  <h2 class="section-title"><a href="https://www.instagram.com/_bernacastro/" target="_blank" style="color:inherit; text-decoration:none;">@_bernacastro</a></h2>
+  <p>¡Preparate para esta gran fiesta!<br>
+  Seguime en mi cuenta de Instagram y etiquetame en tus fotos y videos.</p>
+</section>
+
+<div class="boho-divider"></div>
+
+<!-- Música -->
+<section class="accent-section">
+  <img src="images/icono-canciones.svg" alt="Canciones" class="icon icon-lg">
+  <h2 class="section-title">¡Ayudame a elegir la música!</h2>
+  <p>Podés sugerir tus canciones favoritas para la fiesta.</p>
+  <a href="https://forms.gle/BevwZtFFzXrqUyqV8" target="_blank" class="btn btn-turquoise">Sugerir Canción</a>
+</section>
+
+<div class="boho-divider"></div>
+
+<!-- Galería 2 -->
+<section>
+  <div class="gallery">
+    <img src="images/foto5.jpg" alt="foto5">
+    <img src="images/foto6.jpg" alt="foto6">
+    <img src="images/foto7.jpg" alt="foto7">
+    <img src="images/foto8.jpg" alt="foto8">
+  </div>
+</section>
+
+<div class="boho-divider"></div>
+
+<!-- Regalos -->
+<section class="green-section">
+  <img src="images/icono-regalo.svg" alt="Regalos" class="icon icon-lg">
+  <h2 class="section-title">Regalos</h2>
+  <p>¡Tu presencia es el regalo más importante!</p>
+  <p><strong>Alias:</strong> Berni.castro2011<br>
+  <strong>CBU:</strong> 0140329703709253872727</p>
+</section>
+
+<div class="boho-divider"></div>
+
+<!-- Video Loop -->
+<section class="video-section">
+  <video src="images/loop.mp4" autoplay loop muted playsinline preload="auto" aria-label="Video loop de la invitación"></video>
+</section>
+
+<!-- Gracias -->
+<section class="accent-section">
+  <h2 class="section-title" style="font-family:'Great Vibes', cursive; font-size:3em;">Gracias por acompañarme</h2>
+</section>
+
+<!-- Modal Lightbox -->
+<div class="modal" id="modal">
+  <img id="modal-img" src="">
+</div>
+
+<script>
+  // Countdown
+  const eventDate = new Date("2026-04-11T20:00:00");
+  function updateCountdown() {
+    const now = new Date();
+    const diff = eventDate - now;
+    if(diff <= 0) return;
+    const d = Math.floor(diff / (1000*60*60*24));
+    const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    const m = Math.floor((diff % (1000*60*60)) / (1000*60));
+    const s = Math.floor((diff % (1000*60)) / 1000);
+    document.getElementById("days").innerHTML = d + " <small>Días</small>";
+    document.getElementById("hours").innerHTML = h + " <small>Horas</small>";
+    document.getElementById("mins").innerHTML = m + " <small>Min</small>";
+    document.getElementById("secs").innerHTML = s + " <small>Seg</small>";
+  }
+  setInterval(updateCountdown, 1000);
+
+  // Lightbox
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+  const galleryImages = document.querySelectorAll('.gallery img');
+  let currentIndex = 0;
+
+  const prevArrow = document.createElement('span');
+  prevArrow.classList.add('nav-arrow', 'prev');
+  prevArrow.innerHTML = '&#10094;';
+
+  const nextArrow = document.createElement('span');
+  nextArrow.classList.add('nav-arrow', 'next');
+  nextArrow.innerHTML = '&#10095;';
+
+  modal.appendChild(prevArrow);
+  modal.appendChild(nextArrow);
+
+  function showImage(index) {
+    if (index < 0) {
+      currentIndex = galleryImages.length - 1;
+    } else if (index >= galleryImages.length) {
+      currentIndex = 0;
+    } else {
+      currentIndex = index;
+    }
+    modalImg.src = galleryImages[currentIndex].src;
+  }
+
+  galleryImages.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      showImage(index);
+    });
+  });
+
+  prevArrow.addEventListener('click', (event) => {
+    event.stopPropagation();
+    showImage(currentIndex - 1);
+  });
+
+  nextArrow.addEventListener('click', (event) => {
+    event.stopPropagation();
+    showImage(currentIndex + 1);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (modal.style.display !== 'flex') return;
+
+    if (event.key === 'ArrowRight') {
+      showImage(currentIndex + 1);
+    }
+
+    if (event.key === 'ArrowLeft') {
+      showImage(currentIndex - 1);
+    }
+
+    if (event.key === 'Escape') {
+      modal.style.display = 'none';
+    }
+  });
+
+  modal.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  // Parallax estable (mobile + desktop)
+const parallaxElems = document.querySelectorAll('.parallax');
+
+function handleParallax() {
+  parallaxElems.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    const speed = el.id === "instagram" ? 0.1 : 0.2;
+
+    const viewportCenter = window.innerHeight / 2;
+    const elementCenter = rect.top + rect.height / 2;
+    const distance = elementCenter - viewportCenter;
+
+    const yPos = distance * speed;
+
+    el.style.backgroundPosition = `center ${-yPos}px`;
+  });
+
+  const hero = document.querySelector('header');
+  const logo = document.getElementById('hero-logo');
+  logo.style.opacity = window.scrollY > hero.offsetHeight ? 0 : 1;
+}
+
+window.addEventListener('scroll', handleParallax);
+window.addEventListener('resize', handleParallax);
+
+
+  // Música control play/pausa
+  const music = document.getElementById("bg-music");
+  const musicBtn = document.getElementById("music-btn");
+  let isPlaying = false;
+
+  musicBtn.addEventListener("click", () => {
+    if(isPlaying){
+      music.pause();
+      isPlaying = false;
+      musicBtn.classList.remove("playing");
+    } else {
+      music.play();
+      isPlaying = true;
+      musicBtn.classList.add("playing");
+    }
+  });
+</script>
+</body>
+</html>
