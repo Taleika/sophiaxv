@@ -57,12 +57,13 @@
       padding: 18px 4vw;
       display: flex;
       justify-content: center;
-      gap: 18px;
-      font-size: .7rem;
-      letter-spacing: .18em;
+      gap: 12px;
+      font-size: .62rem;
+      letter-spacing: .12em;
       text-transform: uppercase;
       color: var(--white);
       background: linear-gradient(to bottom, rgba(7,7,7,.55), transparent);
+      white-space: nowrap;
     }
 
     .top-nav a { text-decoration: none; opacity: .9; }
@@ -74,7 +75,7 @@
       display: grid;
       place-items: center;
       text-align: center;
-      background: url('images/hero.jpg') center/cover no-repeat;
+      background: url('images/hero.jpg') left center/cover no-repeat;
       padding: 110px 20px 60px;
     }
 
@@ -117,9 +118,19 @@
     }
 
     section {
-      padding: 90px 8vw;
+      padding: 76px 8vw;
       position: relative;
     }
+
+    #evento .event-grid {
+      text-align: center;
+      justify-items: center;
+    }
+
+    #regalos { padding-bottom: 48px; }
+    #galeria { padding-top: 48px; }
+    #asistencia { padding-bottom: 54px; }
+    #dresscode { padding-top: 54px; }
 
     .section-title {
       margin: 0 0 26px;
@@ -427,7 +438,7 @@
     const hero = document.querySelector(".hero");
     window.addEventListener("scroll", () => {
       const offset = Math.min(window.scrollY * 0.25, 120);
-      hero.style.backgroundPosition = `center calc(50% + ${offset}px)`;
+      hero.style.backgroundPosition = `left calc(50% + ${offset}px)`;
     });
 
     const observer = new IntersectionObserver((entries) => {
